@@ -1,5 +1,5 @@
 # running-pace-converter
-##An old HTML, CSS &amp; JS project that converts pace and speed##
+## An old HTML, CSS &amp; JS project that converts pace and speed ##
 
 This is a very early project from when I started to teach myself to code in April 2020. The code is not pretty, but I learnt a lot doing it so I felt it was worth adding to my GitHub account for now, as evidence of previous explorations into coding.
 
