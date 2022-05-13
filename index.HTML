@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Sophie's Running Tools</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&family=Roboto&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/handlebars@latest/dist/handlebars.js"></script>
+</head>
+
+
+<body>
+    <header>
+        <h1 id = "mainTitle" class = "mainTitle">Sophie's Running Tools</h1>
+        <nav id = "navigationContainer">
+            <ul id = "navigation">
+                <li>Pace Converter</li>
+                <li>Keeping on Track - Annual</li>
+                <li>Keeping on Track - Monthly</li>
+                <li>Keeping on Track - Weekly</li>
+            </ul>
+        </nav>
+    </header>
+
+    
+    <main>
+    <div id = "pace" class = "container"><h2 id = "pcHeading">Pace converter</h2>
+        <div id = "paceForm" class = "formContainer">
+            <div class = "paceSelectContainer">
+                <p>I want to convert</p>
+                <button id = "mpkm" class = "paceOptionSelected">Mins/KM -> Mins/Mile</button>
+                <button id = "mpm" class = "paceOption">Mins/Mile -> Mins/KM</button>
+            </div>
+            <div id = "paceDataFields">
+                <p id="instructions">Please enter your pace in Minutes/KM</p>
+                <label for="paceMinutes">Minutes:</label>
+                <input type="text" id="paceMinutes" name="paceMinutes"><br><br>
+                <label for="paceSeconds">Seconds:</label>
+                <input type="text" id="paceSeconds" name="paceSeconds"><br><br>
+                <div class = "submit">
+                    <button id = "pcSubmitKm" class = "pcSubmit">SUBMIT</button>
+                    <button id = "pcResetKm" class = "pcReset">RESET</button>
+                </div>
+            </div>
+        </div>
+        <div id = "paceFormMiles" class = "formContainer">
+            <div class = "paceSelectContainer">
+                <p>I want to convert</p>
+                 <button id = "mpkmMiles" class = "paceOption">Mins/KM -> Mins/Mile</button>
+                <button id = "mpmMiles" class = "paceOptionSelected">Mins/Mile -> Mins/KM</button>
+            </div>
+            <div id = "paceDataFieldsMiles">
+                <p class="instructionsMiles">Please enter your pace in Minutes/Mile</p>
+                <label for="paceMinutesMiles">Minutes:</label>
+                <input type="text" id="paceMinutesMiles" name="paceMinutesMiles"><br><br>
+                <label for="paceSecondsMiles">Seconds:</label>
+                <input type="text" id="paceSecondsMiles" name="paceSecondsMiles"><br><br>
+                <div class = "submit">
+                    <button id = "pcSubmitMiles" class = "pcSubmit">SUBMIT</button>
+                    <button id = "pcResetMiles" class = "pcReset">RESET</button>
+                </div>
+            </div>
+        </div>
+        <div class = "resultsBox" id = "paceResultsBox">
+            <span id = "original"></span> <span id = "originalUnits">min/KM</span> = <span id = "new"></span> <span id = "newUnits">min/mile</span>
+        </div>
+    </div>
+
+
+    <div id = "speed" class = "container">
+        <h2 id = "speedHeading">Speed converter</h2>
+        <div id = "speedFormKmph" class = "formContainer">
+            <div class = "paceSelectContainer" id = "speedSelectContainer">
+                <p>I want to convert</p>
+                <button id = "kmphKm" class = "paceOptionSelected">KMPH -> MPH</button>
+                <button id = "mphKm" class = "paceOption">MPH -> KMPH</button>
+            </div>
+            <div class = "speedDataFields" id = "speedDataFieldsKmph">
+                <p class="instructions">If you know how fast you were travelling, simply enter it in KMPH below</p>
+                <label for="kmPerHour">KMPH:</label>
+                <input type="text" id="kmPerHour" name="kmPerHour"><br><br>
+                <div class = "submit">
+                    <button id = "kmphSubmit" class = "pcSubmit">SUBMIT</button>
+                    <button id = "kmphReset" class = "pcReset">RESET</button>
+                </div>
+                <p class="instructions">If you don't know your speed work it out below</p>
+                <label for="distanceKmph">Distance in KM:</label>
+                <input type="text" id="distanceKmph" name="distanceKmph"><br><br>
+                <div class = "timeEntry" id = "timeEntryKmph">
+                    <label for="hoursKmph">Hours: </label>
+                    <input type="text" id="hoursKmph" name="hoursKmph" class = "timeEntryField">
+                    <label for="minsKmph">Minutes: </label>
+                    <input type="text" id="minsKmph" name="minsKmph" class = "timeEntryField">
+                    <label for="secsKmph">Seconds: </label>
+                    <input type="text" id="secsKmph" name="secsKmph" class = "timeEntryField">
+                </div><br><br>
+                <div class = "submit">
+                    <button id = "kmphSubmitTAndD" class = "pcSubmit">SUBMIT</button>
+                    <button id = "kmphResetTAndD" class = "pcReset">RESET</button>
+                </div>
+            </div>
+        </div>
+
+        <div id = "speedFormMph" class = "formContainer">
+            <div class = "paceSelectContainer" id = "speedSelectContainer">
+                <p>I want to convert</p>
+                <button id = "kmphMiles" class = "paceOption">KMPH -> MPH</button>
+                <button id = "mphMiles" class = "paceOptionSelected">MPH -> KMPH</button>
+            </div>
+            <div class = "speedDataFields" id = "speedDataFieldsMph">
+                <p class="instructions">If you know how fast you were travelling, simply enter it in MPH below</p>
+                <label for="milesPerHour">MPH:</label>
+                <input type="text" id="milesPerHour" name="milesPerHour"><br><br>
+                <div class = "submit">
+                    <button id = "mphSubmit" class = "pcSubmit">SUBMIT</button>
+                    <button id = "mphReset" class = "pcReset">RESET</button>
+                </div>
+                <p class="instructions">If you don't know your speed work it out below</p>
+                <label for="distanceMph">Distance in miles:</label>
+                <input type="text" id="distanceMph" name="distanceMph"><br><br>
+                <div class = "timeEntry" id = "timeEntryMph">
+                    <label for="hoursMph">Hours: </label>
+                    <input type="text" id="hoursMph" name="hoursMph" class = "timeEntryField">
+                    <label for="minsMph">Minutes: </label>
+                    <input type="text" id="minsMph" name="minsMph" class = "timeEntryField">
+                    <label for="secsMph">Seconds: </label>
+                    <input type="text" id="secsMph" name="secsMph" class = "timeEntryField">
+                </div><br><br>
+                <div class = "submit">
+                    <button id = "mphSubmitTAndD" class = "pcSubmit">SUBMIT</button>
+                    <button id = "mphResetTAndD" class = "pcReset">RESET</button>
+                </div>
+            </div>
+        </div>
+        <div class = "resultsBox" id = "speedResultsBox">
+            <span id = "originalSpeed"></span> <span id = "originalUnitsSpeed">KMPH</span> = <span id = "newSpeed"></span> <span id = "newUnitsSpeed">MPH</span>
+        </div>
+    </div>
+    </main>
+    <script src = "paceConverter.js" type = "text/javascript"></script>
+</body>
+</html>
