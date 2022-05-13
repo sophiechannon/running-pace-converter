@@ -1,0 +1,133 @@
+* {
+    text-decoration: none;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+}
+
+h1 {
+    font-family: 'Permanent Marker', sans-serif;
+    font-size: 5em;
+    margin: 0;
+}
+
+h2 {
+    font-family: 'Permanent Marker', sans-serif;
+    font-weight: 400;
+    font-size: 3em;
+}
+
+button {
+    font-family: 'Permanent Marker', sans-serif;
+    font-weight: 400;
+    font-size: 1.5em;
+    border: 2px black solid;
+    background-color: #789543;
+
+}
+
+main {
+    width: calc(100% - 4em);
+    margin: 0 auto;
+}
+
+header {
+    width: 100%;
+    background-color: #789543;
+    background-image: url(./images/2560px-Moving_legs.jpg);
+    background-position: center;
+    border-bottom: 5px black solid;
+}
+
+nav ul {
+    padding: 0;
+    background-color: whitesmoke;
+    opacity: 0.8;
+}
+
+nav li {
+    display: inline-block;
+    margin: 10px;
+    padding: 2px;
+    font-size: 1.2em;
+}
+
+.container {
+    display: inline-block;
+    vertical-align: top;
+    margin-right: 20px;
+}
+
+.paceOption {
+    font-size: 1em;
+}
+
+.paceOptionSelected {
+    font-size: 1em;
+    border: 2px white solid;
+}
+
+.paceSelectContainer {
+    width: 100%;
+    display: inline-flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.formContainer {
+    width: 600px;
+    border: 5px  black solid;
+    border-radius:5px;
+    background-color: #9a9b99;
+    padding: 10px;
+}
+
+.resultsBox {
+    display: none;
+    width: 600px;
+    border: 5px black solid;
+    border-top: 0;
+    border-radius:5px;
+    background-color:#789543;
+    padding: 10px;
+}
+
+.pcReset {
+    display: none;
+}
+
+.timeEntry {
+    display: inline-flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 60%;
+}
+
+.timeEntryField {
+    width: 30px;
+}
+
+#paceFormMiles {
+    display: none;
+}
+
+#speedFormMph {
+    display: none;
+}
+
+#mainTitle {
+    margin: 10px;
+    color: black;
+}
+
+#speedSelectContainer {
+    width: 80%;
+}
+
+
+
+
+
+  
+
+
+
